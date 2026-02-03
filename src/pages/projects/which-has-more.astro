@@ -1,0 +1,159 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="Which Has More — Max Vogt">
+  <main id="top" class="page-container">
+    <header class="section-pad fade-up">
+      <div class="flex items-center justify-between gap-6">
+        <label class="toggle text-base">
+          <a class="text-[1.25rem] font-semibold text-[var(--color-text)] hover:text-[var(--color-primary)]" href="/">Max.</a>
+          <input type="checkbox" aria-label="Toggle dark mode" data-theme-toggle />
+          <span class="toggle-icons" aria-hidden="true">
+            <span class="toggle-icon icon-moon">◑</span>
+          </span>
+        </label>
+        <nav class="flex items-center gap-8 text-base">
+          <a class="nav-link transition-colors duration-200 hover:text-[var(--color-primary)]" href="/">Work</a>
+          <a class="nav-link transition-colors duration-200 hover:text-[var(--color-primary)]" href="/about">About</a>
+          <a
+            class="nav-link transition-colors duration-200 hover:text-[var(--color-primary)]"
+            href="https://www.instagram.com/maaxvogt/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Fun
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <section class="section-pad fade-up delay-1">
+      <div class="flex flex-col gap-6">
+        <h1 class="text-[clamp(2.8rem,6vw,4.6rem)]">Which Has More</h1>
+        <p class="text-lg text-muted max-w-[52rem]">
+          A minimal interactive game centered around comparison logic and decision-making, designed
+          to provide immediate feedback through clear interaction and intentional simplicity. The
+          project explores how small design choices influence understanding, engagement, and user confidence.
+        </p>
+        <div class="grid gap-6 md:grid-cols-3 text-sm">
+          <div>
+            <p class="text-muted uppercase tracking-[0.2em]">Role</p>
+            <p>Designer & Developer</p>
+          </div>
+          <div>
+            <p class="text-muted uppercase tracking-[0.2em]">Team</p>
+            <p>Solo project</p>
+          </div>
+          <div>
+            <p class="text-muted uppercase tracking-[0.2em]">Duration</p>
+            <p>~1–2 weeks (concept, design, implementation)</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad fade-up delay-2">
+      <div class="case-row">
+        <h2 class="case-title">Intent</h2>
+        <div class="case-body">
+          <p class="text-muted">
+            Which Has More was created as a design exercise, not as a feature-rich game.
+          </p>
+          <p class="text-muted">
+            The goal was to explore how users reason about comparisons when provided with limited
+            information and immediate feedback, and how clarity in interaction design can guide
+            decision-making without explicit instructions.
+          </p>
+          <p class="text-muted">
+            The project intentionally avoids complexity in favor of focus, responsiveness, and learnability.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad">
+      <div class="case-row">
+        <h2 class="case-title">Design & Interaction Approach</h2>
+        <div class="case-body">
+          <p class="text-muted">
+            The game is built around a small set of deliberate design constraints:
+          </p>
+          <ul class="list-disc pl-5 text-muted space-y-2">
+            <li>Single, clear interaction loop</li>
+            <li>Immediate feedback</li>
+            <li>Minimal visual language</li>
+            <li>Low cognitive load</li>
+          </ul>
+          <p class="text-muted">
+            These choices emphasize intuition over instruction.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad">
+      <div class="case-row">
+        <h2 class="case-title">Learning and Growth</h2>
+        <div class="case-body">
+          <p class="text-muted">
+            This project sharpened my sensitivity to user experience at a micro-interaction level:
+          </p>
+          <ul class="list-disc pl-5 text-muted space-y-2">
+            <li>Designing interfaces where clarity emerges through use, not documentation</li>
+            <li>Balancing simplicity with engagement</li>
+            <li>Understanding how feedback timing influences user confidence</li>
+            <li>Treating UX decisions as first-class engineering decisions</li>
+          </ul>
+          <p class="text-muted">
+            It reinforced that even small projects can surface important lessons about usability and design intent.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad">
+      <div class="case-row">
+        <h2 class="case-title">Takeaway</h2>
+        <div class="case-body">
+          <p class="text-muted font-semibold">
+            Good interaction design is not about adding features — it is about removing friction.
+          </p>
+          <p class="text-muted">
+            Which Has More demonstrates how intentional constraints, clear feedback, and simplicity can
+            create experiences that feel intuitive, satisfying, and self-explanatory.
+          </p>
+        </div>
+      </div>
+      <div class="mt-16 text-right">
+        <a href="#top" class="nav-link text-base">Back to Top ↑</a>
+      </div>
+    </section>
+
+    <section class="section-pad">
+      <div class="flex flex-col gap-6">
+        <h2>Let's get in touch</h2>
+        <p class="text-muted">
+          HMU for work, coffee, or if you just want to talk.
+        </p>
+        <div class="flex flex-wrap gap-6 text-sm">
+          <a
+            class="inline-flex items-center gap-2 border-b border-transparent transition-colors duration-200 hover:border-[var(--color-primary)]"
+            href="https://github.com/maaxvogt/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            GitHub
+          </a>
+          <a
+            class="inline-flex items-center gap-2 border-b border-transparent transition-colors duration-200 hover:border-[var(--color-primary)]"
+            href="mailto:mavoxgt@gmail.com"
+          >
+            Mail
+          </a>
+        </div>
+        <p class="text-sm text-muted">Designed and coded by Max Vogt</p>
+      </div>
+    </section>
+  </main>
+</Layout>

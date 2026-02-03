@@ -1,0 +1,203 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="Poddie — Max Vogt">
+  <main id="top" class="page-container">
+    <header class="section-pad fade-up">
+      <div class="flex items-center justify-between gap-6">
+        <label class="toggle text-base">
+          <a class="text-[1.25rem] font-semibold text-[var(--color-text)] hover:text-[var(--color-primary)]" href="/">Max.</a>
+          <input type="checkbox" aria-label="Toggle dark mode" data-theme-toggle />
+          <span class="toggle-icons" aria-hidden="true">
+            <span class="toggle-icon icon-moon">◑</span>
+          </span>
+        </label>
+        <nav class="flex items-center gap-8 text-base">
+          <a class="nav-link transition-colors duration-200 hover:text-[var(--color-primary)]" href="/">Work</a>
+          <a class="nav-link transition-colors duration-200 hover:text-[var(--color-primary)]" href="/about">About</a>
+          <a
+            class="nav-link transition-colors duration-200 hover:text-[var(--color-primary)]"
+            href="https://www.instagram.com/maaxvogt/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Fun
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <section class="section-pad fade-up delay-1">
+      <div class="flex flex-col gap-6">
+        <h1 class="text-[clamp(2.8rem,6vw,4.6rem)]">Poddie – Penetration Testing & Security Awareness</h1>
+        <p class="text-lg text-muted max-w-[52rem]">
+          An authorized penetration testing project focused on identifying real-world security
+          weaknesses and translating technical findings into actionable risk assessments and
+          recommendations for non-technical stakeholders. The project emphasizes responsible testing,
+          clear communication, and practical remediation over exploit complexity.
+        </p>
+        <div class="grid gap-6 md:grid-cols-3 text-sm">
+          <div>
+            <p class="text-muted uppercase tracking-[0.2em]">Role</p>
+            <p>Security Engineer / Penetration Tester</p>
+          </div>
+          <div>
+            <p class="text-muted uppercase tracking-[0.2em]">Team</p>
+            <p>Solo project in coordination with the client and authorized stakeholders</p>
+          </div>
+          <div>
+            <p class="text-muted uppercase tracking-[0.2em]">Duration</p>
+            <p>~4–6 weeks (scoping, testing, reporting, stakeholder review)</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad fade-up delay-2">
+      <div class="case-row">
+        <h2 class="case-title">Impact & Metrics</h2>
+        <div class="case-body">
+          <p class="text-muted">
+            The engagement improved both the security posture and security awareness of the organization:
+          </p>
+          <ul class="list-disc pl-5 text-muted space-y-2">
+            <li>Multiple critical and medium-risk vulnerabilities identified in a controlled and authorized environment</li>
+            <li>100% responsible disclosure, with no disruption to live systems</li>
+            <li>Clear prioritization of risks, enabling focused remediation instead of broad, unfocused hardening</li>
+            <li>Improved stakeholder understanding of security risks beyond purely technical exploit details</li>
+            <li>Findings were directly converted into actionable remediation steps, not just theoretical issues</li>
+          </ul>
+          <p class="text-muted">
+            The project successfully bridged the gap between technical security testing and business
+            decision-making.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad">
+      <div class="case-row">
+        <h2 class="case-title">Brief</h2>
+        <div class="case-body">
+          <p class="text-muted">
+            Many organizations treat penetration testing as a checkbox exercise, producing highly
+            technical reports that are difficult for non-security stakeholders to interpret or act upon.
+          </p>
+          <p class="text-muted">
+            In this project, I conducted an authorized penetration test with the explicit goal of not only
+            identifying vulnerabilities, but also translating technical findings into real-world risks.
+            The outcome was a clear, structured security assessment that enabled informed decisions by
+            both technical teams and non-technical stakeholders.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad">
+      <div class="case-row">
+        <h2 class="case-title">Technical Approach</h2>
+        <div class="case-body">
+          <p class="text-muted">
+            The assessment followed a methodical, scope-driven approach, balancing technical depth with
+            responsibility and clarity.
+          </p>
+          <p class="text-muted font-semibold">Scoping & authorization</p>
+          <p class="text-muted">
+            Defined explicit testing boundaries, targets, and constraints to ensure ethical and legal execution.
+          </p>
+          <p class="text-muted font-semibold">Attack surface analysis</p>
+          <p class="text-muted">
+            Identification of exposed services, authentication flows, and potential entry points.
+          </p>
+          <p class="text-muted font-semibold">Vulnerability discovery & validation</p>
+          <p class="text-muted">
+            Manual and tool-assisted testing to identify misconfigurations, weak authentication mechanisms,
+            and logic flaws, with a focus on exploitability rather than theoretical issues.
+          </p>
+          <p class="text-muted font-semibold">Risk contextualization</p>
+          <p class="text-muted">
+            Each finding was evaluated based on likelihood, impact, and real-world consequences, not just
+            CVSS-style severity.
+          </p>
+          <p class="text-muted font-semibold">Reporting & communication</p>
+          <p class="text-muted">
+            Results were translated into clear, plain-language explanations and prioritized remediation
+            recommendations tailored to non-technical decision-makers.
+          </p>
+          <p class="text-muted">
+            This approach ensured that findings were understood, trusted, and acted upon.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad">
+      <div class="case-row">
+        <h2 class="case-title">Learning and Growth</h2>
+        <div class="case-body">
+          <p class="text-muted">
+            This project strengthened my ability to operate at the intersection of security, engineering,
+            and communication:
+          </p>
+          <ul class="list-disc pl-5 text-muted space-y-2">
+            <li>Conducting penetration tests with a strong emphasis on ethics and responsibility</li>
+            <li>Evaluating vulnerabilities in terms of business impact, not just technical severity</li>
+            <li>Communicating complex security issues clearly to non-technical stakeholders</li>
+            <li>Balancing offensive security techniques with defensive and preventive thinking</li>
+          </ul>
+          <p class="text-muted">
+            It reinforced that effective security work is as much about clarity and trust as it is about
+            technical skill.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad">
+      <div class="case-row">
+        <h2 class="case-title">Takeaway</h2>
+        <div class="case-body">
+          <p class="text-muted font-semibold">
+            Strong security is not achieved by finding the most sophisticated exploits, but by making
+            risks visible, understandable, and actionable.
+          </p>
+          <p class="text-muted">
+            This project demonstrated that penetration testing delivers the most value when technical
+            depth is paired with clear communication and pragmatic remediation — enabling organizations
+            to make better security decisions, not just more secure systems.
+          </p>
+        </div>
+      </div>
+      <div class="mt-16 text-right">
+        <a href="#top" class="nav-link text-base">Back to Top ↑</a>
+      </div>
+    </section>
+
+    <section class="section-pad">
+      <div class="flex flex-col gap-6">
+        <h2>Let's get in touch</h2>
+        <p class="text-muted">
+          HMU for work, coffee, or if you just want to talk.
+        </p>
+        <div class="flex flex-wrap gap-6 text-sm">
+          <a
+            class="inline-flex items-center gap-2 border-b border-transparent transition-colors duration-200 hover:border-[var(--color-primary)]"
+            href="https://github.com/maaxvogt/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            GitHub
+          </a>
+          <a
+            class="inline-flex items-center gap-2 border-b border-transparent transition-colors duration-200 hover:border-[var(--color-primary)]"
+            href="mailto:mavoxgt@gmail.com"
+          >
+            Mail
+          </a>
+        </div>
+        <p class="text-sm text-muted">Designed and coded by Max Vogt</p>
+      </div>
+    </section>
+  </main>
+</Layout>

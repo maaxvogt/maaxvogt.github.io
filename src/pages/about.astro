@@ -1,0 +1,205 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="About — Max Vogt">
+  <main class="page-container">
+    <header class="section-pad fade-up">
+      <div class="flex items-center justify-between gap-6">
+        <label class="toggle text-base">
+          <a class="text-[1.25rem] font-semibold text-[var(--color-text)] hover:text-[var(--color-primary)]" href="/">Max.</a>
+          <input type="checkbox" aria-label="Toggle dark mode" data-theme-toggle />
+          <span class="toggle-icons" aria-hidden="true">
+            <span class="toggle-icon icon-moon">◑</span>
+          </span>
+        </label>
+        <nav class="flex items-center gap-8 text-base">
+          <a class="nav-link transition-colors duration-200 hover:text-[var(--color-primary)]" href="/">Work</a>
+          <a class="nav-link transition-colors duration-200 hover:text-[var(--color-primary)]" href="/about">About</a>
+          <a
+            class="nav-link transition-colors duration-200 hover:text-[var(--color-primary)]"
+            href="https://www.instagram.com/maaxvogt/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Fun
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <section class="section-pad fade-up delay-1">
+      <div class="grid gap-10 md:grid-cols-[1.05fr,0.95fr] md:items-start">
+        <div class="flex flex-col gap-6">
+          <h1 class="text-[clamp(3rem,6vw,5rem)] text-[var(--color-secondary)]">Hey there,</h1>
+          <h1 class="text-[clamp(3.2rem,6vw,5.2rem)]">I'm Max.</h1>
+          <p class="text-muted max-w-[40rem]">
+            I’m a software engineer and product-minded builder who enjoys working on problems where
+            technical correctness, real-world constraints, and human decision-making intersect.
+          </p>
+          <p class="text-muted max-w-[40rem]">
+            My background spans software engineering, applied AI, security, and product development —
+            often in contexts where reliability and clarity matter more than novelty. Over the years,
+            I’ve worked on everything from developer tooling and ML systems to compliance automation and
+            security assessments, frequently taking projects from early concept through production and
+            long-term ownership.
+          </p>
+          <p class="text-muted max-w-[40rem]">
+            I’m particularly drawn to building systems that are explainable, maintainable, and useful
+            in practice, whether the audience is engineers, business stakeholders, or end users.
+          </p>
+          <a class="nav-link text-base" href="/resume.pdf" download>→ Resume</a>
+        </div>
+        <div class="overflow-hidden rounded-2xl md:col-start-2 md:self-start max-h-[520px]">
+          <img src="/images/profilePicture.JPG" alt="Portrait of Max Vogt" class="h-full w-full object-cover" />
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad">
+      <div class="case-row">
+        <h2 class="case-title">What I Care About</h2>
+        <div class="case-body">
+          <p class="text-muted">
+            I care about engineering judgment — knowing when to introduce complexity and when to remove it.
+          </p>
+          <p class="text-muted">Across my projects, I tend to focus on:</p>
+          <ul class="list-disc pl-5 text-muted space-y-2">
+            <li>Deterministic systems before heuristic or AI-driven solutions</li>
+            <li>Clear interfaces between humans and software</li>
+            <li>Long-term maintainability over short-term optimization</li>
+            <li>Tools and products that respect the user’s attention and trust</li>
+          </ul>
+          <p class="text-muted">
+            I believe the best software feels obvious in hindsight, even if it wasn’t obvious to build.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad">
+      <div class="case-row">
+        <h2 class="case-title">Experience Highlights</h2>
+        <div class="case-body">
+          <p class="font-semibold">Founder & Software Engineer</p>
+          <p class="text-muted uppercase tracking-[0.2em] text-xs">XIT — 2020 to 2023</p>
+          <p class="text-muted">
+            I founded and later sold a subscription-based web services company focused on small and
+            medium-sized businesses. I was responsible for the full lifecycle — from client acquisition
+            and product design to engineering, hosting, and long-term maintenance. This experience shaped
+            how I think about ownership, trade-offs, and building systems that actually survive in the
+            real world.
+          </p>
+
+          <p class="font-semibold mt-4">Software Engineer (Applied Automation & AI)</p>
+          <p class="text-muted uppercase tracking-[0.2em] text-xs">Clean Controlling — Project-Based</p>
+          <p class="text-muted">
+            I designed and implemented an automated document monitoring system that detects regulatory
+            changes, summarizes them using AI, and distributes actionable updates to stakeholders. The
+            work emphasized auditability, correctness, and explainability in compliance-sensitive workflows.
+          </p>
+
+          <p class="font-semibold mt-4">Security & Penetration Testing</p>
+          <p class="text-muted uppercase tracking-[0.2em] text-xs">Poddie — Authorized Engagement</p>
+          <p class="text-muted">
+            I conducted an authorized penetration test and translated technical findings into practical
+            risk assessments and remediation guidance for non-technical stakeholders, bridging the gap
+            between security engineering and decision-making.
+          </p>
+
+          <p class="font-semibold mt-4">Developer Tooling & ML Projects</p>
+          <p class="text-muted uppercase tracking-[0.2em] text-xs">Independent Projects</p>
+          <p class="text-muted">
+            I’ve built developer-facing tools (including a VS Code extension for structured commit
+            messages), machine learning systems for sports analytics, and small UX-focused experiments.
+            These projects reflect my interest in clarity, feedback loops, and thoughtful system design
+            at different scales.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad">
+      <div class="case-row">
+        <h2 class="case-title">Outside of Code</h2>
+        <div class="case-body">
+          <p class="text-muted">
+            I enjoy working on projects that balance technical depth with design and usability, and
+            I’m always curious about how people interact with systems — especially when decisions,
+            trust, or constraints are involved.
+          </p>
+          <p class="text-muted">
+            I’m currently looking for environments where I can contribute as an engineer while
+            continuing to grow in system design, product thinking, and technical leadership.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad">
+      <div class="case-row">
+        <h2 class="case-title text-[var(--color-secondary)]">Other.</h2>
+        <div class="case-body">
+          <div class="grid gap-10 lg:grid-cols-[1fr,1fr]">
+            <div class="flex flex-col gap-4">
+              <h3 class="text-xl">What I'm listening to</h3>
+            </div>
+            <div class="grid grid-cols-3 gap-4">
+              <div class="overflow-hidden rounded-2xl aspect-square">
+                <img src="/images/music_1.jpg" alt="Music cover 1" class="h-full w-full object-cover" />
+              </div>
+              <div class="overflow-hidden rounded-2xl aspect-square">
+                <img src="/images/music_2.jpg" alt="Music cover 2" class="h-full w-full object-cover" />
+              </div>
+              <div class="overflow-hidden rounded-2xl aspect-square">
+                <img src="/images/music_3.jpg" alt="Music cover 3" class="h-full w-full object-cover" />
+              </div>
+            </div>
+          </div>
+          <div class="grid gap-10 lg:grid-cols-[1fr,1fr]">
+            <div class="flex flex-col gap-4">
+              <h3 class="text-xl">What I'm watching</h3>
+            </div>
+            <div class="grid grid-cols-3 gap-4">
+              <div class="overflow-hidden rounded-2xl aspect-square">
+                <img src="/images/movie_1.jpg" alt="Movie cover 1" class="h-full w-full object-cover" />
+              </div>
+              <div class="overflow-hidden rounded-2xl aspect-square">
+                <img src="/images/movie_2.jpg" alt="Movie cover 2" class="h-full w-full object-cover" />
+              </div>
+              <div class="overflow-hidden rounded-2xl aspect-square">
+                <img src="/images/movie_3.jpg" alt="Movie cover 3" class="h-full w-full object-cover" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad">
+      <div class="flex flex-col gap-6">
+        <h2>Let's get in touch</h2>
+        <p class="text-muted">
+          HMU for work, coffee, or if you just want to talk.
+        </p>
+        <div class="flex flex-wrap gap-6 text-sm">
+          <a
+            class="inline-flex items-center gap-2 border-b border-transparent transition-colors duration-200 hover:border-[var(--color-primary)]"
+            href="https://github.com/maaxvogt/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            GitHub
+          </a>
+          <a
+            class="inline-flex items-center gap-2 border-b border-transparent transition-colors duration-200 hover:border-[var(--color-primary)]"
+            href="mailto:mavoxgt@gmail.com"
+          >
+            Mail
+          </a>
+        </div>
+        <p class="text-sm text-muted">Designed and coded by Max Vogt</p>
+      </div>
+    </section>
+  </main>
+</Layout>

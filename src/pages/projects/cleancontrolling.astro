@@ -1,0 +1,201 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="CleanControlling — Max Vogt">
+  <main id="top" class="page-container">
+    <header class="section-pad fade-up">
+      <div class="flex items-center justify-between gap-6">
+        <label class="toggle text-base">
+          <a class="text-[1.25rem] font-semibold text-[var(--color-text)] hover:text-[var(--color-primary)]" href="/">Max.</a>
+          <input type="checkbox" aria-label="Toggle dark mode" data-theme-toggle />
+          <span class="toggle-icons" aria-hidden="true">
+            <span class="toggle-icon icon-moon">◑</span>
+          </span>
+        </label>
+        <nav class="flex items-center gap-8 text-base">
+          <a class="nav-link transition-colors duration-200 hover:text-[var(--color-primary)]" href="/">Work</a>
+          <a class="nav-link transition-colors duration-200 hover:text-[var(--color-primary)]" href="/about">About</a>
+          <a
+            class="nav-link transition-colors duration-200 hover:text-[var(--color-primary)]"
+            href="https://www.instagram.com/maaxvogt/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Fun
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <section class="section-pad fade-up delay-1">
+      <div class="flex flex-col gap-6">
+        <h1 class="text-[clamp(2.8rem,6vw,4.6rem)]">CleanControlling – AI-Based PDF Comparison Pipeline</h1>
+        <p class="text-lg text-muted max-w-[52rem]">
+          An automated document monitoring and change-detection system that continuously compares
+          regulatory PDF documents, identifies meaningful updates using deterministic diffing and
+          AI-assisted semantic analysis, and proactively notifies stakeholders. The project prioritizes
+          reliability, auditability, and real-world compliance workflows over heuristic or black-box
+          analysis.
+        </p>
+        <div class="grid gap-6 md:grid-cols-3 text-sm">
+          <div>
+            <p class="text-muted uppercase tracking-[0.2em]">Role</p>
+            <p>Software Engineer (End-to-End Ownership)</p>
+          </div>
+          <div>
+            <p class="text-muted uppercase tracking-[0.2em]">Team</p>
+            <p>Solo project in direct collaboration with business stakeholders</p>
+          </div>
+          <div>
+            <p class="text-muted uppercase tracking-[0.2em]">Duration</p>
+            <p>~3 months (design, implementation, production rollout)</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad fade-up delay-2">
+      <div class="case-row">
+        <h2 class="case-title">Impact & Metrics</h2>
+        <div class="case-body">
+          <p class="text-muted">
+            The system replaced a manual, error-prone review process with a fully automated, continuous
+            monitoring pipeline, delivering measurable operational and compliance impact:
+          </p>
+          <ul class="list-disc pl-5 text-muted space-y-2">
+            <li>~100% coverage of monitored vendor documents</li>
+            <li>Daily automated checks, eliminating irregular manual reviews</li>
+            <li>Minutes instead of hours to detect and communicate relevant changes</li>
+            <li>Reduced compliance risk by ensuring stakeholders always work with the latest approved documentation</li>
+            <li>Zero ongoing maintenance overhead after rollout due to containerized deployment</li>
+          </ul>
+          <p class="text-muted">
+            The solution scaled linearly with the number of documents without increasing human workload.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad">
+      <div class="case-row">
+        <h2 class="case-title">Brief</h2>
+        <div class="case-body">
+          <p class="text-muted">
+            Regulatory and safety documentation changes frequently, yet many organizations still rely on
+            manual checks or infrequent reviews, introducing compliance risks and unnecessary operational
+            overhead.
+          </p>
+          <p class="text-muted">
+            In this project, I designed and implemented a fully automated pipeline that continuously
+            monitors vendor-provided safety data sheets, detects document changes at both structural and
+            semantic levels, and distributes actionable updates to relevant stakeholders. The system
+            replaces reactive, manual processes with a proactive, auditable, and scalable solution
+            tailored for real compliance workflows.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad">
+      <div class="case-row">
+        <h2 class="case-title">Technical Approach</h2>
+        <div class="case-body">
+          <p class="text-muted">
+            The architecture was intentionally designed to prioritize determinism, traceability, and
+            auditability before introducing AI-driven interpretation.
+          </p>
+          <p class="text-muted font-semibold">Document retrieval & versioning</p>
+          <p class="text-muted">
+            Vendor PDFs are periodically fetched and compared against locally versioned documents.
+          </p>
+          <p class="text-muted font-semibold">PDF-level diffing</p>
+          <p class="text-muted">
+            Structural and textual differences are analyzed to distinguish meaningful content changes
+            from cosmetic updates (e.g., formatting or metadata changes).
+          </p>
+          <p class="text-muted font-semibold">AI-assisted semantic analysis</p>
+          <p class="text-muted">
+            When changes are detected, a large language model (Gemini) generates concise, human-readable
+            summaries highlighting what changed and why it matters, optimized for non-technical stakeholders.
+          </p>
+          <p class="text-muted font-semibold">Automation & delivery</p>
+          <p class="text-muted">
+            The pipeline runs in a containerized environment (Docker / Docker Compose) and automatically
+            distributes updated documents and summaries via email.
+          </p>
+          <p class="text-muted">
+            This hybrid approach avoids black-box decisions while still benefiting from AI where it
+            meaningfully reduces cognitive load.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad">
+      <div class="case-row">
+        <h2 class="case-title">Learning and Growth</h2>
+        <div class="case-body">
+          <p class="text-muted">
+            This project significantly deepened my experience in production-grade automation and applied AI:
+          </p>
+          <ul class="list-disc pl-5 text-muted space-y-2">
+            <li>Designing systems where correctness and explainability are more important than raw model output</li>
+            <li>Integrating LLMs into deterministic pipelines without sacrificing trust or auditability</li>
+            <li>Building maintainable, containerized services aligned with real operational constraints</li>
+            <li>Translating regulatory and compliance requirements into concrete technical guarantees</li>
+          </ul>
+          <p class="text-muted">
+            It reinforced the importance of engineering judgment when deciding where AI should — and
+            should not — be used.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad">
+      <div class="case-row">
+        <h2 class="case-title">Takeaway</h2>
+        <div class="case-body">
+          <p class="text-muted font-semibold">
+            Reliable software systems are not defined by how intelligent they appear, but by how predictable,
+            explainable, and useful they are in real workflows.
+          </p>
+          <p class="text-muted">
+            This project demonstrates how AI is most effective when used as a supporting layer on top of
+            well-structured, deterministic systems — enhancing human decision-making rather than replacing it.
+          </p>
+        </div>
+      </div>
+      <div class="mt-16 text-right">
+        <a href="#top" class="nav-link text-base">Back to Top ↑</a>
+      </div>
+    </section>
+
+    <section class="section-pad">
+      <div class="flex flex-col gap-6">
+        <h2>Let's get in touch</h2>
+        <p class="text-muted">
+          HMU for work, coffee, or if you just want to talk.
+        </p>
+        <div class="flex flex-wrap gap-6 text-sm">
+          <a
+            class="inline-flex items-center gap-2 border-b border-transparent transition-colors duration-200 hover:border-[var(--color-primary)]"
+            href="https://github.com/maaxvogt/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            GitHub
+          </a>
+          <a
+            class="inline-flex items-center gap-2 border-b border-transparent transition-colors duration-200 hover:border-[var(--color-primary)]"
+            href="mailto:mavoxgt@gmail.com"
+          >
+            Mail
+          </a>
+        </div>
+        <p class="text-sm text-muted">Designed and coded by Max Vogt</p>
+      </div>
+    </section>
+  </main>
+</Layout>

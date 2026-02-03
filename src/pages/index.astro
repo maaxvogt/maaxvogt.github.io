@@ -1,17 +1,225 @@
 ---
-
+import Layout from '../layouts/Layout.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout title="Max Vogt — Fullstack (Generalist)">
+  <main class="page-container">
+    <header class="section-pad fade-up">
+      <div class="flex items-center justify-between gap-6">
+        <label class="toggle text-base">
+          <a class="text-[1.25rem] font-semibold text-[var(--color-text)] hover:text-[var(--color-primary)]" href="/">Max.</a>
+          <input type="checkbox" aria-label="Toggle dark mode" data-theme-toggle />
+          <span class="toggle-icons" aria-hidden="true">
+            <span class="toggle-icon icon-moon">◑</span>
+          </span>
+        </label>
+        <nav class="flex items-center gap-8 text-base">
+          <a class="nav-link transition-colors duration-200 hover:text-[var(--color-primary)]" href="/">Work</a>
+          <a class="nav-link transition-colors duration-200 hover:text-[var(--color-primary)]" href="/about">About</a>
+          <a
+            class="nav-link transition-colors duration-200 hover:text-[var(--color-primary)]"
+            href="https://www.instagram.com/maaxvogt/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Fun
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <section class="section-pad fade-up delay-1">
+      <div class="flex flex-col gap-4 max-w-[48rem]">
+        <h1 class="text-[clamp(2.8rem,6vw,4.6rem)]">Max Vogt</h1>
+        <p class="text-lg text-muted">
+          I’m a <span class="mark-underline">full-stack generalist</span> building
+          <span class="mark-wavy">reliable software systems</span>, with a strong focus on
+          <span class="mark-circle">clarity</span> and calm collaboration.
+        </p>
+        <p class="text-[clamp(3.2rem,6vw,4.4rem)] font-semibold text-[var(--color-secondary)] mt-32">
+          Featured Projects.
+        </p>
+      </div>
+    </section>
+
+    <section id="projects" class="section-pad fade-up delay-2">
+      <div class="flex flex-col gap-10">
+        <div class="flex flex-col">
+          <article class="flex flex-col gap-6 reveal min-h-screen py-12" data-reveal>
+            <a href="/projects/architectural-smells" class="group flex flex-col gap-6">
+              <div class="flex flex-wrap items-center gap-3 text-base uppercase tracking-[0.25em] text-muted">
+                <span class="rounded-full border-subtle px-5 py-2.5">Software Architecture</span>
+                <span class="rounded-full border-subtle px-5 py-2.5">Case Study</span>
+                <span class="rounded-full border-subtle px-5 py-2.5">Developer Tooling</span>
+              </div>
+              <div class="flex items-center justify-between gap-4">
+                <h2 class="text-[clamp(2rem,4vw,3rem)]">Architectural Smells Detection</h2>
+                <span class="text-3xl text-muted transition-all duration-200 group-hover:text-[var(--color-primary)] group-hover:translate-x-2">→</span>
+              </div>
+              <p class="text-muted">
+                An AI-assisted developer tool that analyzes software systems to detect architectural
+                smells such as cyclic dependencies, god classes, and feature envy, improving
+                maintainability and system clarity.
+              </p>
+              <div class="project-media rounded-2xl h-[50vh] overflow-hidden">
+                <img src="/images/arch_analysis_picture.png" alt="Architectural Smells Detection" class="h-full w-full object-cover" loading="lazy" />
+              </div>
+            </a>
+          </article>
+
+          <article class="flex flex-col gap-6 reveal min-h-screen py-12" data-reveal>
+            <a href="/projects/cleancontrolling" class="group flex flex-col gap-6">
+              <div class="flex flex-wrap items-center gap-3 text-base uppercase tracking-[0.25em] text-muted">
+                <span class="rounded-full border-subtle px-5 py-2.5">AI Automation</span>
+                <span class="rounded-full border-subtle px-5 py-2.5">Document Analysis</span>
+                <span class="rounded-full border-subtle px-5 py-2.5">Business Software</span>
+              </div>
+              <div class="flex items-center justify-between gap-4">
+                <h2 class="text-[clamp(2rem,4vw,3rem)]">CleanControlling – AI-Based PDF Comparison Pipeline</h2>
+                <span class="text-3xl text-muted transition-all duration-200 group-hover:text-[var(--color-primary)] group-hover:translate-x-2">→</span>
+              </div>
+              <p class="text-muted">
+                Built an automated system that compares local safety data sheets with vendor versions,
+                detects changes, runs AI analysis, replaces outdated files, and notifies teams by email.
+              </p>
+              <div class="project-media rounded-2xl h-[50vh] overflow-hidden">
+                <img src="/images/cc_logo.png" alt="CleanControlling" class="h-full w-full object-contain p-10" loading="lazy" />
+              </div>
+            </a>
+          </article>
+
+          <article class="flex flex-col gap-6 reveal min-h-screen py-12" data-reveal>
+            <a href="/projects/poddie" class="group flex flex-col gap-6">
+              <div class="flex flex-wrap items-center gap-3 text-base uppercase tracking-[0.25em] text-muted">
+                <span class="rounded-full border-subtle px-5 py-2.5">Security</span>
+                <span class="rounded-full border-subtle px-5 py-2.5">Penetration Testing</span>
+                <span class="rounded-full border-subtle px-5 py-2.5">Risk Awareness</span>
+              </div>
+              <div class="flex items-center justify-between gap-4">
+                <h2 class="text-[clamp(2rem,4vw,3rem)]">Poddie – Penetration Testing & Security Awareness</h2>
+                <span class="text-3xl text-muted transition-all duration-200 group-hover:text-[var(--color-primary)] group-hover:translate-x-2">→</span>
+              </div>
+              <p class="text-muted">
+                Performed an authorized penetration test and translated findings into practical risks
+                and clear recommendations for non-technical stakeholders.
+              </p>
+              <div class="project-media rounded-2xl h-[50vh] overflow-hidden">
+                <img src="/images/poddie_logo.webp" alt="Poddie" class="h-full w-full object-contain p-10" loading="lazy" />
+              </div>
+            </a>
+          </article>
+
+          <article class="flex flex-col gap-6 reveal min-h-screen py-12" data-reveal>
+            <a href="/projects/xit" class="group flex flex-col gap-6">
+              <div class="flex flex-wrap items-center gap-3 text-base uppercase tracking-[0.25em] text-muted">
+                <span class="rounded-full border-subtle px-5 py-2.5">Web Development</span>
+                <span class="rounded-full border-subtle px-5 py-2.5">Client Work</span>
+                <span class="rounded-full border-subtle px-5 py-2.5">Entrepreneurship</span>
+              </div>
+              <div class="flex items-center justify-between gap-4">
+                <h2 class="text-[clamp(2rem,4vw,3rem)]">XIT – Websites for Small & Medium Businesses</h2>
+                <span class="text-3xl text-muted transition-all duration-200 group-hover:text-[var(--color-primary)] group-hover:translate-x-2">→</span>
+              </div>
+              <p class="text-muted">
+                Designed, built, hosted, and maintained websites for SMBs, covering the full lifecycle
+                from client communication to deployment and long-term maintenance.
+              </p>
+              <div class="project-media rounded-2xl h-[50vh] flex items-center justify-center">
+                <span class="xit-wordmark">[XIT]</span>
+              </div>
+            </a>
+          </article>
+
+          <article class="flex flex-col gap-6 reveal min-h-screen py-12" data-reveal>
+            <a href="/projects/sports-ml" class="group flex flex-col gap-6">
+              <div class="flex flex-wrap items-center gap-3 text-base uppercase tracking-[0.25em] text-muted">
+                <span class="rounded-full border-subtle px-5 py-2.5">Machine Learning</span>
+                <span class="rounded-full border-subtle px-5 py-2.5">Sports Analytics</span>
+                <span class="rounded-full border-subtle px-5 py-2.5">Data Science</span>
+              </div>
+              <div class="flex items-center justify-between gap-4">
+                <h2 class="text-[clamp(2rem,4vw,3rem)]">Sports Match Outcome Prediction</h2>
+                <span class="text-3xl text-muted transition-all duration-200 group-hover:text-[var(--color-primary)] group-hover:translate-x-2">→</span>
+              </div>
+              <p class="text-muted">
+                Built ML models to predict match outcomes, focusing on feature engineering, evaluation,
+                and the factors that most influence predictions.
+              </p>
+              <div class="project-media rounded-2xl h-[50vh] overflow-hidden">
+                <img src="/images/sports_ml.png" alt="Sports Match Outcome Prediction" class="h-full w-full object-cover" loading="lazy" />
+              </div>
+            </a>
+          </article>
+
+          <article class="flex flex-col gap-6 reveal min-h-screen py-12" data-reveal>
+            <a href="/projects/git-commit-assistant" class="group flex flex-col gap-6">
+              <div class="flex flex-wrap items-center gap-3 text-base uppercase tracking-[0.25em] text-muted">
+                <span class="rounded-full border-subtle px-5 py-2.5">Developer Experience</span>
+                <span class="rounded-full border-subtle px-5 py-2.5">VS Code Extension</span>
+                <span class="rounded-full border-subtle px-5 py-2.5">AI Assistance</span>
+              </div>
+              <div class="flex items-center justify-between gap-4">
+                <h2 class="text-[clamp(2rem,4vw,3rem)]">Git Commit Message Assistant</h2>
+                <span class="text-3xl text-muted transition-all duration-200 group-hover:text-[var(--color-primary)] group-hover:translate-x-2">→</span>
+              </div>
+              <p class="text-muted">
+                A VS Code extension that analyzes code changes and suggests concise, structured commit
+                messages for clearer collaboration and readability.
+              </p>
+              <div class="project-media rounded-2xl h-[50vh] overflow-hidden">
+                <img src="/images/vs_code_extension_logo.png" alt="Git Commit Message Assistant" class="h-full w-full object-contain p-10" loading="lazy" />
+              </div>
+            </a>
+          </article>
+
+          <article class="flex flex-col gap-6 reveal min-h-screen py-12" data-reveal>
+            <a href="/projects/which-has-more" class="group flex flex-col gap-6">
+              <div class="flex flex-wrap items-center gap-3 text-base uppercase tracking-[0.25em] text-muted">
+                <span class="rounded-full border-subtle px-5 py-2.5">Game Development</span>
+                <span class="rounded-full border-subtle px-5 py-2.5">UX Design</span>
+                <span class="rounded-full border-subtle px-5 py-2.5">Logic</span>
+              </div>
+              <div class="flex items-center justify-between gap-4">
+                <h2 class="text-[clamp(2rem,4vw,3rem)]">Which Has More</h2>
+                <span class="text-3xl text-muted transition-all duration-200 group-hover:text-[var(--color-primary)] group-hover:translate-x-2">→</span>
+              </div>
+              <p class="text-muted">
+                A minimal interactive game about comparison logic and decision-making, designed for
+                clarity, feedback, and user experience.
+              </p>
+              <div class="project-media rounded-2xl h-[50vh] overflow-hidden">
+                <img src="/images/which-has-more.png" alt="Which Has More" class="h-full w-full object-cover" loading="lazy" />
+              </div>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section-pad fade-up delay-3">
+      <div class="flex flex-col gap-6">
+        <h2>Let's get in touch</h2>
+        <p class="text-muted">
+          HMU for work, coffee, or if you just want to talk.
+        </p>
+        <div class="flex flex-wrap gap-6 text-sm">
+          <a
+            class="inline-flex items-center gap-2 border-b border-transparent transition-colors duration-200 hover:border-[var(--color-primary)]"
+            href="https://github.com/maaxvogt/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            GitHub
+          </a>
+          <a
+            class="inline-flex items-center gap-2 border-b border-transparent transition-colors duration-200 hover:border-[var(--color-primary)]"
+            href="mailto:mavoxgt@gmail.com"
+          >
+            Mail
+          </a>
+        </div>
+        <p class="text-sm text-muted">Designed and coded by Max Vogt</p>
+      </div>
+    </section>
+  </main>
+</Layout>

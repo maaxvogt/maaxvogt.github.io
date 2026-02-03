@@ -1,0 +1,195 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="Git Commit Message Assistant — Max Vogt">
+  <main id="top" class="page-container">
+    <header class="section-pad fade-up">
+      <div class="flex items-center justify-between gap-6">
+        <label class="toggle text-base">
+          <a class="text-[1.25rem] font-semibold text-[var(--color-text)] hover:text-[var(--color-primary)]" href="/">Max.</a>
+          <input type="checkbox" aria-label="Toggle dark mode" data-theme-toggle />
+          <span class="toggle-icons" aria-hidden="true">
+            <span class="toggle-icon icon-moon">◑</span>
+          </span>
+        </label>
+        <nav class="flex items-center gap-8 text-base">
+          <a class="nav-link transition-colors duration-200 hover:text-[var(--color-primary)]" href="/">Work</a>
+          <a class="nav-link transition-colors duration-200 hover:text-[var(--color-primary)]" href="/about">About</a>
+          <a
+            class="nav-link transition-colors duration-200 hover:text-[var(--color-primary)]"
+            href="https://www.instagram.com/maaxvogt/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Fun
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <section class="section-pad fade-up delay-1">
+      <div class="flex flex-col gap-6">
+        <h1 class="text-[clamp(2.8rem,6vw,4.6rem)]">Git Commit Message Assistant</h1>
+        <p class="text-lg text-muted max-w-[52rem]">
+          A VS Code extension that analyzes code changes and suggests concise, structured commit
+          messages to improve readability, consistency, and collaboration in software teams. The
+          project focuses on developer experience, clarity, and practical adoption rather than
+          automated commit generation.
+        </p>
+        <div class="grid gap-6 md:grid-cols-3 text-sm">
+          <div>
+            <p class="text-muted uppercase tracking-[0.2em]">Role</p>
+            <p>Software Engineer / Tooling Engineer</p>
+          </div>
+          <div>
+            <p class="text-muted uppercase tracking-[0.2em]">Team</p>
+            <p>Solo project</p>
+          </div>
+          <div>
+            <p class="text-muted uppercase tracking-[0.2em]">Duration</p>
+            <p>~4–6 weeks (design, implementation, publishing, iteration)</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad fade-up delay-2">
+      <div class="case-row">
+        <h2 class="case-title">Context</h2>
+        <div class="case-body">
+          <p class="text-muted">
+            Commit messages are a critical yet often neglected part of software collaboration.
+            Inconsistent or low-quality messages reduce traceability, slow down code reviews, and
+            weaken long-term maintainability.
+          </p>
+          <p class="text-muted">
+            This project was motivated by the observation that while teams care deeply about code
+            quality, commit quality is rarely enforced or supported by tooling. The goal was to create
+            a lightweight assistant that integrates directly into the developer workflow without
+            adding friction.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad">
+      <div class="case-row">
+        <h2 class="case-title">Technical Approach</h2>
+        <div class="case-body">
+          <p class="text-muted">
+            The extension is designed around a workflow-first and deterministic core, ensuring
+            predictable behavior and developer trust.
+          </p>
+          <p class="text-muted font-semibold">Change analysis</p>
+          <p class="text-muted">
+            The extension inspects staged Git diffs to understand the scope and nature of code changes.
+          </p>
+          <p class="text-muted font-semibold">Structured message generation</p>
+          <p class="text-muted">
+            Suggested commit messages follow a clear structure (type, scope, summary), encouraging best
+            practices without enforcing rigid rules.
+          </p>
+          <p class="text-muted font-semibold">AI-assisted refinement (optional)</p>
+          <p class="text-muted">
+            AI is used as an assistive layer to improve phrasing and clarity, while developers retain
+            full control over the final message.
+          </p>
+          <p class="text-muted font-semibold">VS Code–native integration</p>
+          <p class="text-muted">
+            Built using the VS Code Extension API, the assistant integrates seamlessly into existing
+            Git workflows.
+          </p>
+          <p class="text-muted">
+            The design intentionally avoids fully automated commits, keeping developers in the decision loop.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad">
+      <div class="case-row">
+        <h2 class="case-title">Impact & Adoption Signals</h2>
+        <div class="case-body">
+          <p class="text-muted">
+            Despite being a developer tool, the project shows clear indicators of practical value:
+          </p>
+          <ul class="list-disc pl-5 text-muted space-y-2">
+            <li>Improved commit message consistency across repositories</li>
+            <li>Reduced cognitive load when writing commits for larger or mixed changes</li>
+            <li>Positive feedback from users regarding readability and usefulness</li>
+            <li>Published and maintained as a real VS Code extension, not a prototype</li>
+          </ul>
+          <p class="text-muted">
+            The project demonstrates how small, focused tools can meaningfully improve team workflows.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad">
+      <div class="case-row">
+        <h2 class="case-title">Learning and Growth</h2>
+        <div class="case-body">
+          <p class="text-muted">
+            Building the Git Commit Message Assistant strengthened my experience in developer tooling
+            and UX-driven engineering:
+          </p>
+          <ul class="list-disc pl-5 text-muted space-y-2">
+            <li>Designing tools that developers trust and willingly adopt</li>
+            <li>Balancing automation with developer control</li>
+            <li>Working with Git internals and diff representations</li>
+            <li>Publishing, versioning, and maintaining a public VS Code extension</li>
+          </ul>
+          <p class="text-muted">
+            It reinforced that developer experience is a product discipline, not just a UI concern.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad">
+      <div class="case-row">
+        <h2 class="case-title">Takeaway</h2>
+        <div class="case-body">
+          <p class="text-muted font-semibold">
+            Great developer tools don’t replace judgment — they amplify it.
+          </p>
+          <p class="text-muted">
+            This project shows how thoughtful automation, when embedded directly into existing
+            workflows, can improve collaboration and code quality without disrupting developer autonomy.
+          </p>
+        </div>
+      </div>
+      <div class="mt-16 text-right">
+        <a href="#top" class="nav-link text-base">Back to Top ↑</a>
+      </div>
+    </section>
+
+    <section class="section-pad">
+      <div class="flex flex-col gap-6">
+        <h2>Let's get in touch</h2>
+        <p class="text-muted">
+          HMU for work, coffee, or if you just want to talk.
+        </p>
+        <div class="flex flex-wrap gap-6 text-sm">
+          <a
+            class="inline-flex items-center gap-2 border-b border-transparent transition-colors duration-200 hover:border-[var(--color-primary)]"
+            href="https://github.com/maaxvogt/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            GitHub
+          </a>
+          <a
+            class="inline-flex items-center gap-2 border-b border-transparent transition-colors duration-200 hover:border-[var(--color-primary)]"
+            href="mailto:mavoxgt@gmail.com"
+          >
+            Mail
+          </a>
+        </div>
+        <p class="text-sm text-muted">Designed and coded by Max Vogt</p>
+      </div>
+    </section>
+  </main>
+</Layout>

@@ -1,0 +1,67 @@
+---
+import '../styles/global.css';
+
+const { title = 'Max Vogt — Fullstack (Generalist)' } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Portfolio of Max Vogt, fullstack generalist." />
+    <title>{title}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Roboto:wght@400;500&family=Sora:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <slot />
+    <script>
+      const root = document.documentElement;
+      const storedTheme = localStorage.getItem('theme');
+      if (storedTheme) root.dataset.theme = storedTheme;
+
+      const syncToggles = () => {
+        const isDark = root.dataset.theme === 'dark';
+        document.querySelectorAll('[data-theme-toggle]').forEach((toggle) => {
+          toggle.checked = isDark;
+        });
+      };
+
+      const applyTheme = (isDark) => {
+        root.dataset.theme = isDark ? 'dark' : 'light';
+        localStorage.setItem('theme', root.dataset.theme);
+        syncToggles();
+      };
+
+      syncToggles();
+
+      document.addEventListener('change', (event) => {
+        if (event.target && event.target.matches('[data-theme-toggle]')) {
+          applyTheme(event.target.checked);
+        }
+      });
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+            } else {
+              entry.target.classList.remove('is-visible');
+            }
+          });
+        },
+        { threshold: 0.15 }
+      );
+
+      window.addEventListener('load', () => {
+        document.querySelectorAll('[data-reveal]').forEach((el) => observer.observe(el));
+      });
+    </script>
+  </body>
+</html>

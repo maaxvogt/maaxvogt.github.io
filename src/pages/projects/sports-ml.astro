@@ -1,0 +1,206 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="Sports Match Outcome Prediction — Max Vogt">
+  <main id="top" class="page-container">
+    <header class="section-pad fade-up">
+      <div class="flex items-center justify-between gap-6">
+        <label class="toggle text-base">
+          <a class="text-[1.25rem] font-semibold text-[var(--color-text)] hover:text-[var(--color-primary)]" href="/">Max.</a>
+          <input type="checkbox" aria-label="Toggle dark mode" data-theme-toggle />
+          <span class="toggle-icons" aria-hidden="true">
+            <span class="toggle-icon icon-moon">◑</span>
+          </span>
+        </label>
+        <nav class="flex items-center gap-8 text-base">
+          <a class="nav-link transition-colors duration-200 hover:text-[var(--color-primary)]" href="/">Work</a>
+          <a class="nav-link transition-colors duration-200 hover:text-[var(--color-primary)]" href="/about">About</a>
+          <a
+            class="nav-link transition-colors duration-200 hover:text-[var(--color-primary)]"
+            href="https://www.instagram.com/maaxvogt/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Fun
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <section class="section-pad fade-up delay-1">
+      <div class="flex flex-col gap-6">
+        <h1 class="text-[clamp(2.8rem,6vw,4.6rem)]">Sports Match Outcome Prediction</h1>
+        <p class="text-lg text-muted max-w-[52rem]">
+          A machine learning project focused on predicting football match outcomes, with an emphasis
+          on feature engineering, model evaluation, and understanding which factors most strongly
+          influence predictions. The project prioritizes interpretability, validation, and
+          decision-relevant insights over leaderboard-style optimization.
+        </p>
+        <div class="grid gap-6 md:grid-cols-3 text-sm">
+          <div>
+            <p class="text-muted uppercase tracking-[0.2em]">Role</p>
+            <p>Machine Learning Engineer</p>
+          </div>
+          <div>
+            <p class="text-muted uppercase tracking-[0.2em]">Team</p>
+            <p>Solo project</p>
+          </div>
+          <div>
+            <p class="text-muted uppercase tracking-[0.2em]">Duration</p>
+            <p>~6–8 weeks (data preparation, modeling, evaluation, analysis)</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad fade-up delay-2">
+      <div class="case-row">
+        <h2 class="case-title">Context</h2>
+        <div class="case-body">
+          <p class="text-muted">
+            Match outcome prediction is often approached as a pure optimization problem, with little
+            attention paid to why a model makes certain predictions or how reliable those predictions
+            are in practice.
+          </p>
+          <p class="text-muted">
+            This project was designed to go beyond accuracy alone by focusing on feature quality,
+            evaluation rigor, and model interpretability, ensuring that predictions are both
+            measurable and explainable.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad">
+      <div class="case-row">
+        <h2 class="case-title">Technical Approach</h2>
+        <div class="case-body">
+          <p class="text-muted">
+            The system follows a data-centric machine learning workflow, emphasizing correctness and
+            insight generation at each stage.
+          </p>
+          <p class="text-muted font-semibold">Data ingestion & preprocessing</p>
+          <p class="text-muted">
+            Historical match data was cleaned, normalized, and structured to ensure temporal consistency
+            and avoid data leakage.
+          </p>
+          <p class="text-muted font-semibold">Feature engineering</p>
+          <p class="text-muted">
+            Domain-informed features were designed, including:
+          </p>
+          <ul class="list-disc pl-5 text-muted space-y-2">
+            <li>Team strength indicators (e.g., rating-based features)</li>
+            <li>Recent form and momentum</li>
+            <li>Home vs. away effects</li>
+            <li>Match context variables</li>
+          </ul>
+          <p class="text-muted">Feature relevance was iteratively evaluated rather than assumed.</p>
+          <p class="text-muted font-semibold">Modeling & evaluation</p>
+          <p class="text-muted">
+            Multiple models were trained and compared, with a strong focus on:
+          </p>
+          <ul class="list-disc pl-5 text-muted space-y-2">
+            <li>Proper train / validation splits aligned with time-series constraints</li>
+            <li>Evaluation metrics beyond raw accuracy (e.g., precision, recall, calibration)</li>
+            <li>Robustness across seasons and competition phases</li>
+          </ul>
+          <p class="text-muted font-semibold">Interpretability & analysis</p>
+          <p class="text-muted">
+            Feature importance and contribution analysis were used to identify which factors most
+            influenced predictions, helping distinguish signal from noise.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad">
+      <div class="case-row">
+        <h2 class="case-title">Impact & Insights</h2>
+        <div class="case-body">
+          <p class="text-muted">
+            While the project was exploratory rather than deployed in production, it generated several
+            concrete insights:
+          </p>
+          <ul class="list-disc pl-5 text-muted space-y-2">
+            <li>Feature quality had a larger impact than model complexity on predictive performance</li>
+            <li>Team strength and recent form consistently outweighed short-term anomalies</li>
+            <li>Overfitting risks were significant without careful temporal validation</li>
+            <li>Interpretability tools helped uncover spurious correlations early in the modeling process</li>
+          </ul>
+          <p class="text-muted">
+            The project demonstrated how ML systems can be evaluated not only by performance, but by
+            trustworthiness and explanatory power.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad">
+      <div class="case-row">
+        <h2 class="case-title">Learning and Growth</h2>
+        <div class="case-body">
+          <p class="text-muted">
+            This project strengthened my understanding of applied machine learning in non-ideal,
+            real-world data settings:
+          </p>
+          <ul class="list-disc pl-5 text-muted space-y-2">
+            <li>Designing features that encode domain knowledge rather than raw statistics</li>
+            <li>Evaluating models under realistic assumptions and constraints</li>
+            <li>Identifying and mitigating data leakage and overfitting</li>
+            <li>Treating interpretability as a first-class requirement, not an afterthought</li>
+          </ul>
+          <p class="text-muted">
+            It reinforced a data-first mindset where model behavior matters as much as model output.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad">
+      <div class="case-row">
+        <h2 class="case-title">Takeaway</h2>
+        <div class="case-body">
+          <p class="text-muted font-semibold">
+            Effective machine learning systems are built by understanding the data and the problem
+            domain, not by blindly increasing model complexity.
+          </p>
+          <p class="text-muted">
+            This project highlights the importance of feature engineering, rigorous evaluation, and
+            interpretability in creating models that are not only accurate, but also reliable and
+            explainable.
+          </p>
+        </div>
+      </div>
+      <div class="mt-16 text-right">
+        <a href="#top" class="nav-link text-base">Back to Top ↑</a>
+      </div>
+    </section>
+
+    <section class="section-pad">
+      <div class="flex flex-col gap-6">
+        <h2>Let's get in touch</h2>
+        <p class="text-muted">
+          HMU for work, coffee, or if you just want to talk.
+        </p>
+        <div class="flex flex-wrap gap-6 text-sm">
+          <a
+            class="inline-flex items-center gap-2 border-b border-transparent transition-colors duration-200 hover:border-[var(--color-primary)]"
+            href="https://github.com/maaxvogt/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            GitHub
+          </a>
+          <a
+            class="inline-flex items-center gap-2 border-b border-transparent transition-colors duration-200 hover:border-[var(--color-primary)]"
+            href="mailto:mavoxgt@gmail.com"
+          >
+            Mail
+          </a>
+        </div>
+        <p class="text-sm text-muted">Designed and coded by Max Vogt</p>
+      </div>
+    </section>
+  </main>
+</Layout>

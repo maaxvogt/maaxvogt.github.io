@@ -1,0 +1,354 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="Architectural Smells Detection — Max Vogt">
+  <main id="top" class="page-container">
+    <header class="section-pad fade-up">
+      <div class="flex items-center justify-between gap-6">
+        <label class="toggle text-base">
+          <a class="text-[1.25rem] font-semibold text-[var(--color-text)] hover:text-[var(--color-primary)]" href="/">Max.</a>
+          <input type="checkbox" aria-label="Toggle dark mode" data-theme-toggle />
+          <span class="toggle-icons" aria-hidden="true">
+            <span class="toggle-icon icon-moon">◑</span>
+          </span>
+        </label>
+        <nav class="flex items-center gap-8 text-base">
+          <a class="nav-link transition-colors duration-200 hover:text-[var(--color-primary)]" href="/">Work</a>
+          <a class="nav-link transition-colors duration-200 hover:text-[var(--color-primary)]" href="/about">About</a>
+          <a
+            class="nav-link transition-colors duration-200 hover:text-[var(--color-primary)]"
+            href="https://www.instagram.com/maaxvogt/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Fun
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <section class="section-pad fade-up delay-1">
+      <div class="flex flex-col gap-6">
+        <h1 class="text-[clamp(2.8rem,6vw,4.6rem)]">Architectural Smells Detection</h1>
+        <p class="text-lg text-muted max-w-[52rem]">
+          A VS Code–native architecture analysis tool that detects structural and layering violations
+          in codebases using deterministic rules, with optional AI-assisted summarization. The project
+          focuses on correctness, reproducibility, and privacy, rather than heuristic or black-box
+          analysis.
+        </p>
+        <div class="grid gap-6 md:grid-cols-3 text-sm">
+          <div>
+            <p class="text-muted uppercase tracking-[0.2em]">Role</p>
+            <p>Software Engineer (Architecture & Developer Tooling)</p>
+            <p class="text-muted">
+              End-to-end ownership of system design, implementation, testing, and documentation.
+            </p>
+          </div>
+          <div>
+            <p class="text-muted uppercase tracking-[0.2em]">Team</p>
+            <p>Individual project</p>
+            <p class="text-muted">
+              Designed and built independently, following production-level engineering standards.
+            </p>
+          </div>
+          <div>
+            <p class="text-muted uppercase tracking-[0.2em]">Duration</p>
+            <p>Several weeks of iterative development across multiple phases.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad fade-up delay-2">
+      <div class="case-row">
+        <h2 class="case-title">Brief</h2>
+        <div class="case-body">
+          <p class="text-muted">
+            This project addresses a common problem in growing codebases: architectural rules such as
+            layering and dependency direction are difficult to enforce consistently and early.
+          </p>
+          <p class="text-muted">
+            The system integrates directly into VS Code and surfaces architectural violations as
+            native diagnostics. A deterministic analysis engine ensures reproducible results, while
+            an optional AI layer provides human-readable summaries without influencing the
+            underlying findings.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad">
+      <div class="case-row">
+        <h2 class="case-title">My Contribution</h2>
+        <div class="case-body">
+          <p class="text-muted">
+            I designed and implemented the full system, including the VS Code extension, a local
+            companion service, the deterministic rule engine, and an optional AI summarization layer.
+          </p>
+          <p class="text-muted">
+            Beyond implementation, I focused on architectural decisions, privacy guarantees,
+            testability, and long-term extensibility—treating the project as a production system
+            rather than a prototype.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad">
+      <div class="case-row">
+        <h2 class="case-title">Problem</h2>
+        <div class="case-body">
+          <p class="text-muted">
+            Architectural constraints are typically enforced through conventions and code reviews,
+            which do not scale well as teams and codebases grow.
+          </p>
+          <p class="text-muted">
+            Many existing tools rely on heavyweight static analysis or AI-driven heuristics, leading
+            to non-deterministic results, limited trust, and unclear privacy implications. Developers
+            lack a lightweight, reliable way to detect architectural violations directly in their
+            daily workflow.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad">
+      <div class="case-row">
+        <h2 class="case-title">Goal</h2>
+        <div class="case-body">
+          <p class="text-muted">The goal was to build a tool that:</p>
+          <ul class="list-disc pl-5 text-muted space-y-2">
+            <li>Detects architectural violations deterministically</li>
+            <li>Integrates seamlessly into existing IDE workflows</li>
+            <li>Works fully offline by default</li>
+            <li>Enforces privacy guarantees by design</li>
+            <li>Treats AI as optional and non-authoritative</li>
+          </ul>
+          <p class="text-muted">
+            Success was measured by clarity of results, reproducibility, and ease of adoption—not by
+            feature breadth.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad">
+      <div class="case-row">
+        <h2 class="case-title">Target Users</h2>
+        <div class="case-body">
+          <div class="project-media rounded-2xl p-6 flex items-center gap-6">
+            <div class="h-20 w-20 rounded-2xl bg-white/70 flex items-center justify-center overflow-hidden">
+              <img src="/images/avatar_1.png" alt="Target user 1" class="h-full w-full object-cover" />
+            </div>
+            <div class="text-muted">
+              <p class="uppercase tracking-[0.2em] text-xs text-muted">Target User 1</p>
+              <p class="text-base text-[var(--color-text)]">
+                “I want to make sure my code follows clear architectural rules as it grows.”
+              </p>
+            </div>
+          </div>
+          <div class="project-media rounded-2xl p-6 flex items-center gap-6">
+            <div class="h-20 w-20 rounded-2xl bg-white/70 flex items-center justify-center overflow-hidden">
+              <img src="/images/avatar_2.png" alt="Target user 2" class="h-full w-full object-cover" />
+            </div>
+            <div class="text-muted">
+              <p class="uppercase tracking-[0.2em] text-xs text-muted">Target User 2</p>
+              <p class="text-base text-[var(--color-text)]">
+                “I want to keep our codebase clean and maintainable, even with multiple contributors.”
+              </p>
+            </div>
+          </div>
+          <div class="project-media rounded-2xl p-6 flex items-center gap-6">
+            <div class="h-20 w-20 rounded-2xl bg-white/70 flex items-center justify-center overflow-hidden">
+              <img src="/images/avatar_3.png" alt="Target user 3" class="h-full w-full object-cover" />
+            </div>
+            <div class="text-muted">
+              <p class="uppercase tracking-[0.2em] text-xs text-muted">Target User 3</p>
+              <p class="text-base text-[var(--color-text)]">
+                “I want to ensure our architecture analysis is private and does not leak code.”
+              </p>
+            </div>
+          </div>
+          <div class="project-media rounded-2xl p-6 flex items-center gap-6">
+            <div class="h-20 w-20 rounded-2xl bg-white/70 flex items-center justify-center overflow-hidden">
+              <img src="/images/avatar_4.png" alt="Target user 4" class="h-full w-full object-cover" />
+            </div>
+            <div class="text-muted">
+              <p class="uppercase tracking-[0.2em] text-xs text-muted">Target User 4</p>
+              <p class="text-base text-[var(--color-text)]">
+                “I want to catch architectural problems early without slowing down development.”
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad">
+      <div class="case-row">
+        <h2 class="case-title">Research</h2>
+        <div class="case-body">
+          <p class="text-muted">
+            I reviewed existing architecture analysis tools and developer workflows to understand
+            why many solutions fail to gain adoption. The analysis focused on trust, developer
+            experience, and operational constraints.
+          </p>
+          <p class="text-muted font-semibold">Key Insights</p>
+          <ul class="list-disc pl-5 text-muted space-y-2">
+            <li>Deterministic results significantly increase trust and adoption</li>
+            <li>Native IDE integration reduces friction compared to external tools</li>
+            <li>Privacy must be enforced technically, not just documented</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad">
+      <div class="case-row">
+        <h2 class="case-title">Designing the Product</h2>
+        <div class="case-body">
+          <p class="text-muted">
+            The system was designed with a clear separation of concerns: the VS Code extension
+            handles user interaction, while all analysis logic runs in a local companion service.
+          </p>
+          <p class="text-muted">
+            This architecture improves testability, isolates complexity, and allows the analysis
+            engine to evolve independently of the IDE integration.
+          </p>
+          <p class="text-muted font-semibold">Core Requirements</p>
+          <ul class="list-disc pl-5 text-muted space-y-2">
+            <li>Deterministic, versioned analysis results</li>
+            <li>Direct mapping from findings to source locations</li>
+            <li>Zero cloud dependency by default</li>
+            <li>Optional AI support without affecting core behavior</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad">
+      <div class="case-row">
+        <h2 class="case-title">Finding a Project — Browse</h2>
+        <div class="case-body">
+          <p class="text-muted">
+            Rather than introducing a new navigation paradigm, findings appear directly in the
+            VS Code Problems Panel. This aligns with existing developer expectations and makes
+            issues immediately actionable. A report view provides additional context when needed.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad">
+      <div class="case-row">
+        <h2 class="case-title">Decision 1</h2>
+        <div class="case-body">
+          <p class="font-semibold">Deterministic Analysis First</p>
+          <p class="text-muted">
+            I chose a deterministic, regex-based rule engine as the foundation of the system.
+          </p>
+          <p class="text-muted">
+            While this approach trades some precision for simplicity, it guarantees reproducible
+            results, enables reliable regression testing, and avoids non-deterministic behavior
+            common in AI-driven analysis.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad">
+      <div class="case-row">
+        <h2 class="case-title">Decision 2</h2>
+        <div class="case-body">
+          <p class="font-semibold">Separate Companion Service</p>
+          <p class="text-muted">
+            All analysis logic runs in a local companion service instead of inside the extension.
+          </p>
+          <p class="text-muted">
+            This introduces some operational overhead but provides clear benefits: better isolation,
+            explicit versioning, easier testing, and a clean boundary for future extensions such as
+            additional languages or analysis strategies.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad">
+      <div class="case-row">
+        <h2 class="case-title">Past Iterations</h2>
+        <div class="case-body">
+          <p class="text-muted">
+            Earlier iterations experimented with tighter coupling and more complex heuristics. These
+            approaches were intentionally simplified in favor of a more robust and maintainable
+            architecture.
+          </p>
+          <p class="text-muted font-semibold">Known Limitations</p>
+          <ul class="list-disc pl-5 text-muted space-y-2">
+            <li>Regex-based rules cannot fully match AST-level precision</li>
+            <li>Initial language coverage is intentionally limited</li>
+            <li>Companion setup requires explicit documentation</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad">
+      <div class="case-row">
+        <h2 class="case-title">Next Steps</h2>
+        <div class="case-body">
+          <p class="font-semibold">Increasing Precision and Coverage</p>
+          <p class="text-muted">
+            Future work includes AST-backed rules, expanded language support, and improved onboarding
+            for the companion service. The architecture is designed to support these extensions
+            incrementally.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad">
+      <div class="case-row">
+        <h2 class="case-title">Takeaways</h2>
+        <div class="case-body">
+          <p class="font-semibold">Designing for Trust Scales Better Than Designing for Features</p>
+          <p class="text-muted">
+            This project reinforced that developer tools succeed when they are predictable,
+            transparent, and respectful of real-world constraints such as privacy and testability.
+            Clear architecture and explicit trade-offs often matter more than advanced or opaque
+            features.
+          </p>
+        </div>
+      </div>
+      <div class="mt-16 text-right">
+        <a href="#top" class="nav-link text-base">Back to Top ↑</a>
+      </div>
+    </section>
+
+    <section class="section-pad">
+      <div class="flex flex-col gap-6">
+        <h2>Let's get in touch</h2>
+        <p class="text-muted">
+          HMU for work, coffee, or if you just want to talk.
+        </p>
+        <div class="flex flex-wrap gap-6 text-sm">
+          <a
+            class="inline-flex items-center gap-2 border-b border-transparent transition-colors duration-200 hover:border-[var(--color-primary)]"
+            href="https://github.com/maaxvogt/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            GitHub
+          </a>
+          <a
+            class="inline-flex items-center gap-2 border-b border-transparent transition-colors duration-200 hover:border-[var(--color-primary)]"
+            href="mailto:mavoxgt@gmail.com"
+          >
+            Mail
+          </a>
+        </div>
+        <p class="text-sm text-muted">Designed and coded by Max Vogt</p>
+      </div>
+    </section>
+  </main>
+</Layout>
