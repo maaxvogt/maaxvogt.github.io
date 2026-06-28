@@ -1,0 +1,267 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="Poddie Ops (POPS) — Max Vogt">
+  <main id="top" class="page-container">
+    <header class="section-pad fade-up">
+      <div class="flex items-center justify-between gap-6">
+        <label class="toggle text-base">
+          <a class="text-[1.25rem] font-semibold text-[var(--color-text)] hover:text-[var(--color-primary)]" href="/">Max.</a>
+          <input type="checkbox" aria-label="Toggle dark mode" data-theme-toggle />
+          <span class="toggle-icons" aria-hidden="true">
+            <span class="toggle-icon icon-moon">◑</span>
+          </span>
+        </label>
+        <nav class="flex items-center gap-8 text-base">
+          <a class="nav-link transition-colors duration-200 hover:text-[var(--color-primary)]" href="/">Work</a>
+          <a class="nav-link transition-colors duration-200 hover:text-[var(--color-primary)]" href="/about">About</a>
+          <a
+            class="nav-link transition-colors duration-200 hover:text-[var(--color-primary)]"
+            href="https://www.instagram.com/maaxvogt/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Fun
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <section class="section-pad fade-up delay-1">
+      <div class="flex flex-col gap-6">
+        <h1 class="text-[clamp(2.8rem,6vw,4.6rem)]">Poddie Ops (POPS) — A Full-Stack Operations Platform Built on the Edge</h1>
+        <p class="text-lg text-muted max-w-[52rem]">
+          Poddie Ops is a custom, end-to-end operations management platform that runs an entire
+          manufacturing business — from the moment a sales order lands to the day a modular office pod
+          is produced, shipped, installed, and invoiced. It's built serverless-first on Cloudflare's edge
+          network, integrates two external ERP/CRM systems (Katana MRP and Salesforce), and even
+          gamifies the factory floor. One platform replaced a tangle of spreadsheets, manual hand-offs,
+          and disconnected tools.
+        </p>
+        <div class="grid gap-6 md:grid-cols-3 text-sm">
+          <div>
+            <p class="text-muted uppercase tracking-[0.2em]">Role</p>
+            <p>Sole Architect & Developer</p>
+          </div>
+          <div>
+            <p class="text-muted uppercase tracking-[0.2em]">Stack</p>
+            <p>Cloudflare Workers, D1, Durable Objects, R2, React 18, TypeScript, TanStack Query, Vite, i18next</p>
+          </div>
+          <div>
+            <p class="text-muted uppercase tracking-[0.2em]">Scope</p>
+            <p>Backend, frontend, ERP integrations, infrastructure & ops</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad fade-up delay-2">
+      <div class="case-row">
+        <h2 class="case-title">The Problem</h2>
+        <div class="case-body">
+          <p class="text-muted">
+            Poddie manufactures modular office pods — configurable, physical products with dozens of
+            options (exterior/interior colors, fire protection, sockets per country, furniture, monitors,
+            and more). Running that business means orchestrating a long, branching chain of work: sales
+            order → product configuration → serial-number assignment → multi-step production across two
+            factory halls → logistics & route planning → on-site installation → invoicing & commission.
+          </p>
+          <p class="text-muted">
+            Each of those stages traditionally lived in its own silo — different spreadsheets, different
+            people, no shared source of truth, and no real-time visibility. When something changed
+            upstream (a delivery date, a configuration, a route), the information rarely reached the
+            people downstream in time.
+          </p>
+          <p class="text-muted">Poddie Ops was built to be that single source of truth.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad">
+      <div class="case-row">
+        <h2 class="case-title">The Architecture</h2>
+        <div class="case-body">
+          <p class="text-muted">
+            Poddie Ops is split into two deployable sub-projects, both running on Cloudflare Workers:
+          </p>
+          <ul class="list-disc pl-5 text-muted space-y-2">
+            <li><span class="font-semibold">poddie-backend/</span> — a serverless API written in JavaScript on Cloudflare Workers, with 19 route handlers covering every business domain.</li>
+            <li><span class="font-semibold">poddie-frontend/</span> — a React 18 single-page app in strict-mode TypeScript, with 40+ routes across 16 feature areas.</li>
+          </ul>
+          <p class="text-muted">
+            Choosing the Cloudflare edge as the foundation was a deliberate bet: no servers to patch,
+            global low-latency, and a tightly integrated data layer.
+          </p>
+          <p class="text-muted font-semibold">Compute</p>
+          <p class="text-muted">Cloudflare Workers (nodejs_compat) — zero cold starts, deploys in seconds, scales to zero cost.</p>
+          <p class="text-muted font-semibold">Database</p>
+          <p class="text-muted">Cloudflare D1 (SQLite) — ~55 tables, 70+ versioned migrations, a real relational schema, not a key-value bolt-on.</p>
+          <p class="text-muted font-semibold">Real-time</p>
+          <p class="text-muted">A Durable Object, PoddieLive, runs a single WebSocket hub fanning out across 6 channels.</p>
+          <p class="text-muted font-semibold">File storage</p>
+          <p class="text-muted">R2 buckets for product images, documents, and screenshots.</p>
+          <p class="text-muted font-semibold">Auth</p>
+          <p class="text-muted">Cloudflare Access (JWT) plus service tokens for enterprise SSO with an API-secret fallback for automation.</p>
+          <p class="text-muted font-semibold">Scheduling</p>
+          <p class="text-muted">Cron triggers handle ERP sync every 10 minutes and automated DB backups.</p>
+          <p class="text-muted">
+            A detail I'm proud of: 70+ sequential SQL migrations. The schema wasn't designed once and
+            frozen — it evolved alongside the business, every change captured as a reproducible, ordered
+            migration applied directly to the production D1 database. That discipline is what kept a
+            fast-moving project maintainable.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad">
+      <div class="case-row">
+        <h2 class="case-title">What It Actually Does</h2>
+        <div class="case-body">
+          <p class="text-muted">
+            Poddie Ops covers nine core business domains, each a fully-featured module:
+          </p>
+          <ul class="list-disc pl-5 text-muted space-y-2">
+            <li><span class="font-semibold">Orders & CRM</span> — customers, contacts, addresses, order creation, and two-way Salesforce opportunity sync.</li>
+            <li><span class="font-semibold">Product Catalog</span> — products, configuration options, add-ons, per-country pricing, and production-step definitions.</li>
+            <li><span class="font-semibold">Serial Numbers</span> — automatic, prefix-based serial generation and assignment with full audit logging.</li>
+            <li><span class="font-semibold">Production</span> — units, multi-step workflows across two factory halls, team and employee assignment, machine benchmarking, and live progress logs.</li>
+            <li><span class="font-semibold">Installation</span> — a stops-based routing system with calendars, teams, trucks, and signed delivery documents (CMR/LS).</li>
+            <li><span class="font-semibold">Invoices</span> — advance and final invoices, payment tracking, and sales commission.</li>
+            <li><span class="font-semibold">Inventory</span> — stock management with reservation and sold-state tracking.</li>
+            <li><span class="font-semibold">Unified Inbox</span> — tasks, forms, comments, and notifications in one place.</li>
+            <li><span class="font-semibold">Dashboard</span> — KPIs and analytics across the whole pipeline.</li>
+          </ul>
+          <p class="text-muted">
+            The thread connecting all of these is real-time state. Through the PoddieLive Durable
+            Object, a change made in production instantly reflects on the installation calendar, the
+            dashboard, and any other connected screen — across channels for production, installation,
+            orders, and per-user notifications.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad">
+      <div class="case-row">
+        <h2 class="case-title">The Hard Parts (and How They Were Solved)</h2>
+        <div class="case-body">
+          <p class="text-muted font-semibold">Bi-directional ERP integration with Katana MRP</p>
+          <p class="text-muted">
+            This is the kind of integration that quietly breaks businesses. Poddie's manufacturing data
+            lives in Katana MRP, but the team needed Poddie Ops to be the master and Katana the slave —
+            a single, authoritative catalog.
+          </p>
+          <p class="text-muted">
+            The solution: every catalog change in Poddie Ops (a new product, color, add-on value, or
+            family) automatically triggers a background sync to Katana via Cloudflare's
+            ctx.waitUntil(), plus a safety-net cron every 10 minutes. The sync maps Poddie's relational
+            catalog into Katana's 15-group variant structure with a precise naming convention
+            ("Product / model / version / color").
+          </p>
+          <p class="text-muted">Two engineering decisions stand out:</p>
+          <ul class="list-disc pl-5 text-muted space-y-2">
+            <li>The sync only ever adds variants, never deletes them — protecting live sales orders from being orphaned by an upstream change.</li>
+            <li>Graceful degradation: if the Katana API key is missing, the sync skips silently instead of throwing — the platform keeps working even when an external dependency is unavailable.</li>
+          </ul>
+
+          <p class="text-muted font-semibold mt-4">A schema that models a real, messy business</p>
+          <p class="text-muted">
+            The 55-table D1 schema reflects genuine operational complexity — not a textbook example.
+            Addresses are stored as immutable snapshots so historical orders stay accurate even when a
+            customer moves. Serial numbers carry full provenance (manually changed by whom, when).
+            Installation stops capture real-world details like elevator dimensions, building floor, and
+            opening hours. This is domain modeling done by someone who understood the operation deeply.
+          </p>
+
+          <p class="text-muted font-semibold mt-4">Gamifying the factory floor</p>
+          <p class="text-muted">
+            My favorite feature. To boost engagement on the production line, Poddie Ops runs a live
+            Connect-4 game between production teams — every completed production step drops a token on a
+            shared 6×7 board, with daily team pairings, cooldowns, and win detection. It's a small thing
+            that turns routine work into a bit of friendly competition, powered by the same real-time
+            WebSocket infrastructure as everything else.
+          </p>
+
+          <p class="text-muted font-semibold mt-4">A polished, human frontend</p>
+          <p class="text-muted">
+            The React frontend isn't an afterthought. It's fully internationalized (German/English/Polish
+            via i18next — important for a team spanning multiple countries), uses TanStack Query for
+            robust server-state caching, and includes thoughtful touches like a personalized welcome
+            screen with an online-colleague counter and a custom Vite plugin that auto-generates
+            time-of-day celebration animations.
+          </p>
+
+          <p class="text-muted font-semibold mt-4">A standalone satellite service</p>
+          <p class="text-muted">
+            Beyond the core platform, I built poddie-reports — an independent, single-file Cloudflare
+            Worker for employee bug/improvement/change reports. It shares the same D1 database, has a
+            public submission form (with honeypot spam protection) and an admin dashboard, handles
+            screenshot uploads to R2, and pixel-matches the main app's design tokens — all with no build
+            step. It demonstrates that the platform is an extensible ecosystem, not a monolith.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad">
+      <div class="case-row">
+        <h2 class="case-title">What This Project Demonstrates</h2>
+        <div class="case-body">
+          <p class="text-muted">For anyone evaluating my work, Poddie Ops is evidence of:</p>
+          <ul class="list-disc pl-5 text-muted space-y-2">
+            <li><span class="font-semibold">End-to-end ownership</span> — I architected, built, and operate the database, backend, frontend, integrations, and DevOps. There's no part of this stack I haven't touched.</li>
+            <li><span class="font-semibold">Serverless / edge-native engineering</span> — real production use of Workers, D1, Durable Objects, R2, and Cloudflare Access, not a tutorial deployment.</li>
+            <li><span class="font-semibold">Systems integration</span> — reliable, bi-directional sync with two third-party platforms (Katana MRP, Salesforce), with the failure modes thought through.</li>
+            <li><span class="font-semibold">Real-time architecture</span> — a WebSocket hub built on Durable Objects that keeps an entire organization in sync.</li>
+            <li><span class="font-semibold">Domain-driven design</span> — a 55-table schema and 70+ migrations that faithfully model a complex physical-manufacturing business.</li>
+            <li><span class="font-semibold">Pragmatic product sense</span> — from immutable address snapshots to a Connect-4 game, decisions consistently balance correctness, resilience, and the human experience of the people who use the tool every day.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad">
+      <div class="case-row">
+        <h2 class="case-title">Takeaway</h2>
+        <div class="case-body">
+          <p class="text-muted font-semibold">
+            Poddie Ops took a manufacturing operation that ran on spreadsheets and manual hand-offs and
+            turned it into a single, real-time, integrated platform — built on modern serverless
+            infrastructure, and running in production today.
+          </p>
+        </div>
+      </div>
+      <div class="mt-16 text-right">
+        <a href="#top" class="nav-link text-base">Back to Top ↑</a>
+      </div>
+    </section>
+
+    <section class="section-pad">
+      <div class="flex flex-col gap-6">
+        <h2>Let's get in touch</h2>
+        <p class="text-muted">
+          HMU for work, coffee, or if you just want to talk.
+        </p>
+        <div class="flex flex-wrap gap-6 text-sm">
+          <a
+            class="inline-flex items-center gap-2 border-b border-transparent transition-colors duration-200 hover:border-[var(--color-primary)]"
+            href="https://github.com/maaxvogt/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            GitHub
+          </a>
+          <a
+            class="inline-flex items-center gap-2 border-b border-transparent transition-colors duration-200 hover:border-[var(--color-primary)]"
+            href="mailto:mavoxgt@gmail.com"
+          >
+            Mail
+          </a>
+        </div>
+        <p class="text-sm text-muted">Designed and coded by Max Vogt</p>
+      </div>
+    </section>
+  </main>
+</Layout>

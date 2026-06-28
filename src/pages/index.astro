@@ -2,7 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Max Vogt — Fullstack (Generalist)">
+<Layout title="Max Vogt — AI Developer">
   <main class="page-container">
     <header class="section-pad fade-up">
       <div class="flex items-center justify-between gap-6">
@@ -32,8 +32,8 @@ import Layout from '../layouts/Layout.astro';
       <div class="flex flex-col gap-4 max-w-[48rem]">
         <h1 class="text-[clamp(2.8rem,6vw,4.6rem)]">Max Vogt</h1>
         <p class="text-lg text-muted">
-          I’m a <span class="mark-underline">full-stack generalist</span> building
-          <span class="mark-wavy">reliable software systems</span>, with a strong focus on
+          I’m an <span class="mark-underline">AI developer</span> building
+          <span class="mark-wavy">intelligent, production-grade systems</span>, with a strong focus on
           <span class="mark-circle">clarity</span> and calm collaboration.
         </p>
         <p class="text-[clamp(3.2rem,6vw,4.4rem)] font-semibold text-[var(--color-secondary)] mt-32">
@@ -105,6 +105,27 @@ import Layout from '../layouts/Layout.astro';
               </p>
               <div class="project-media rounded-2xl h-[50vh] overflow-hidden">
                 <img src="/images/poddie_logo.webp" alt="Poddie" class="h-full w-full object-contain p-10" loading="lazy" />
+              </div>
+            </a>
+          </article>
+
+          <article class="flex flex-col gap-6 reveal min-h-screen py-12" data-reveal>
+            <a href="/projects/pops" class="group flex flex-col gap-6">
+              <div class="flex flex-wrap items-center gap-3 text-base uppercase tracking-[0.25em] text-muted">
+                <span class="rounded-full border-subtle px-5 py-2.5">Serverless / Edge</span>
+                <span class="rounded-full border-subtle px-5 py-2.5">ERP Systems</span>
+                <span class="rounded-full border-subtle px-5 py-2.5">Full-Stack Platform</span>
+              </div>
+              <div class="flex items-center justify-between gap-4">
+                <h2 class="text-[clamp(2rem,4vw,3rem)]">Poddie Ops (POPS) – Operations Platform</h2>
+                <span class="text-3xl text-muted transition-all duration-200 group-hover:text-[var(--color-primary)] group-hover:translate-x-2">→</span>
+              </div>
+              <p class="text-muted">
+                I built the IT infrastructure for the company Poddie and, as part of that, wrote a
+                custom ERP system that runs the entire manufacturing business end to end.
+              </p>
+              <div class="project-media rounded-2xl h-[50vh] overflow-hidden">
+                <img src="/images/poddie_logo.webp" alt="Poddie Ops" class="h-full w-full object-contain p-10" loading="lazy" />
               </div>
             </a>
           </article>
