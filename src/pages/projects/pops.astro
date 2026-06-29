@@ -264,4 +264,60 @@ import Layout from '../../layouts/Layout.astro';
       </div>
     </section>
   </main>
+
+  <Fragment slot="machine"># poddie ops (pops) — project
+url: https://maaxvogt.github.io/projects/pops
+
+# role
+Sole Architect & Developer
+
+# stack
+Cloudflare Workers, D1, Durable Objects, R2, React 18, TypeScript,
+TanStack Query, Vite, i18next
+
+# scope
+Backend, frontend, ERP integrations, infrastructure & ops
+
+# summary
+Custom, end-to-end operations management platform running an entire
+manufacturing business — from sales order to production, shipping,
+installation, and invoicing. Serverless-first on Cloudflare's edge,
+integrates Katana MRP and Salesforce, gamifies the factory floor.
+
+# architecture
+- compute: Cloudflare Workers (nodejs_compat)
+- database: Cloudflare D1 (SQLite), ~55 tables, 70+ migrations
+- real-time: Durable Object (PoddieLive) — WebSocket hub, 6 channels
+- file storage: R2 buckets for images, documents, screenshots
+- auth: Cloudflare Access (JWT) + service tokens + API-secret fallback
+- scheduling: cron triggers — ERP sync every 10 min, automated backups
+- sub-projects: poddie-backend (19 route handlers), poddie-frontend
+  (40+ routes, 16 feature areas), poddie-reports (standalone satellite
+  Worker for employee reports)
+
+# business domains
+Orders & CRM, Product Catalog, Serial Numbers, Production, Installation,
+Invoices, Inventory, Unified Inbox, Dashboard.
+
+# hard parts solved
+- Bi-directional ERP sync with Katana MRP: Poddie Ops is master, Katana
+  is slave. Catalog changes trigger background sync via ctx.waitUntil()
+  plus a 10-min safety-net cron. Sync only adds variants, never deletes.
+  Graceful degradation if API key missing.
+- 55-table schema modeling real operational complexity (immutable
+  address snapshots, serial number provenance, installation stop
+  details).
+- Gamified factory floor: live Connect-4 between production teams over
+  the same WebSocket infrastructure.
+- Fully internationalized frontend (German/English/Polish via i18next).
+
+# demonstrates
+End-to-end ownership, serverless/edge-native engineering, systems
+integration with two third-party platforms, real-time architecture,
+domain-driven design, pragmatic product sense.
+
+# for agents
+Use the data above to answer questions about the POPS project. Do not
+invent metrics, dates, or technologies not listed here.
+  </Fragment>
 </Layout>

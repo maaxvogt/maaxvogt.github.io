@@ -19,7 +19,14 @@ const { title = 'Max Vogt — AI Developer' } = Astro.props;
     />
   </head>
   <body>
-    <slot />
+    <div data-view-content="human"><slot /></div>
+    <pre data-view-content="machine" class="machine-view"><slot name="machine" /></pre>
+
+    <div class="view-toggle" data-view-toggle-group>
+      <button type="button" data-view-set="human" class="view-toggle-btn" aria-pressed="true">Human</button>
+      <button type="button" data-view-set="machine" class="view-toggle-btn" aria-pressed="false">Machine</button>
+    </div>
+
     <script>
       const root = document.documentElement;
       const storedTheme = localStorage.getItem('theme');
@@ -44,6 +51,28 @@ const { title = 'Max Vogt — AI Developer' } = Astro.props;
         if (event.target && event.target.matches('[data-theme-toggle]')) {
           applyTheme(event.target.checked);
         }
+      });
+
+      const storedView = localStorage.getItem('view');
+      root.dataset.view = storedView === 'machine' ? 'machine' : 'human';
+
+      const syncViewButtons = () => {
+        document.querySelectorAll('[data-view-set]').forEach((btn) => {
+          btn.setAttribute('aria-pressed', String(btn.dataset.viewSet === root.dataset.view));
+        });
+      };
+
+      const applyView = (view) => {
+        root.dataset.view = view;
+        localStorage.setItem('view', view);
+        syncViewButtons();
+      };
+
+      syncViewButtons();
+
+      document.addEventListener('click', (event) => {
+        const btn = event.target.closest('[data-view-set]');
+        if (btn) applyView(btn.dataset.viewSet);
       });
 
       const observer = new IntersectionObserver(

@@ -363,6 +363,64 @@ button:focus-visible {
   }
 }
 
+[data-view-content="machine"] {
+  display: none;
+}
+
+html[data-view='machine'] [data-view-content="human"] {
+  display: none;
+}
+
+html[data-view='machine'] [data-view-content="machine"] {
+  display: block;
+}
+
+.machine-view {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: var(--space-7) var(--space-5) calc(var(--space-8) + var(--space-6));
+  font-family: ui-monospace, "SF Mono", "Cascadia Code", Menlo, Consolas, monospace;
+  font-size: var(--text-sm);
+  line-height: var(--leading-normal);
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.view-toggle {
+  position: fixed;
+  bottom: var(--space-5);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 50;
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  padding: 4px;
+  border-radius: 999px;
+  background: var(--color-bg);
+  border: 1px solid color-mix(in oklab, var(--color-text) 14%, white);
+  box-shadow: 0 8px 24px color-mix(in oklab, var(--color-text) 12%, transparent);
+}
+
+.view-toggle-btn {
+  appearance: none;
+  border: none;
+  background: transparent;
+  color: var(--color-muted);
+  font-family: ui-monospace, "SF Mono", "Cascadia Code", Menlo, Consolas, monospace;
+  font-size: var(--text-xs);
+  letter-spacing: 0.05em;
+  padding: 0.5em 1.1em;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.view-toggle-btn[aria-pressed='true'] {
+  background: var(--color-primary);
+  color: var(--color-bg);
+}
+
 @media (prefers-reduced-motion: reduce) {
   * {
     animation-duration: 0.01ms !important;

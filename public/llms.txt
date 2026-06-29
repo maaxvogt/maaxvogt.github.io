@@ -1,0 +1,75 @@
+# max vogt — ai developer
+url: https://maaxvogt.github.io
+
+# summary
+AI developer and product-minded builder. Background spans applied AI,
+full-stack engineering, security, and product development. Focused on
+building intelligent, explainable, production-grade systems with an
+emphasis on clarity and calm collaboration. Currently looking for
+environments to contribute as an engineer while growing in system
+design, product thinking, and technical leadership.
+
+# pages
+- /: home, featured projects
+- /about: bio, values, experience highlights
+- /projects/architectural-smells: AI-assisted architecture analysis tool
+- /projects/cleancontrolling: AI-based PDF comparison pipeline
+- /projects/poddie: penetration testing & security awareness
+- /projects/pops: Poddie Ops, serverless ERP platform
+- /projects/xit: web dev studio for SMBs
+- /projects/sports-ml: sports match outcome prediction (ML)
+- /projects/git-commit-assistant: VS Code commit message extension
+- /projects/which-has-more: comparison-logic browser game
+
+# experience
+- AI Developer & IT Infrastructure — Poddie (Poddie Ops / POPS): built
+  the company's IT infrastructure and a custom serverless ERP system
+  (Cloudflare Workers, D1, Durable Objects, R2) running an entire
+  manufacturing pipeline end to end, with real-time collaboration and
+  two external ERP/CRM integrations (Katana MRP, Salesforce).
+- Founder & Software Engineer — XIT (2020–2023): founded and sold a
+  subscription-based web services company for SMBs, owning the full
+  lifecycle from client acquisition to engineering and maintenance.
+- AI Developer (Applied Automation & AI) — Clean Controlling: automated
+  document monitoring system detecting regulatory changes, summarizing
+  via AI (Gemini), and distributing updates to stakeholders.
+- Security & Penetration Testing — Poddie (authorized engagement):
+  conducted a penetration test and translated findings into risk
+  assessments for non-technical stakeholders.
+- Developer Tooling & ML Projects — independent: a VS Code commit
+  message extension, ML systems for sports analytics, and small
+  UX-focused experiments.
+
+# featured projects
+- Architectural Smells Detection: VS Code–native tool detecting cyclic
+  dependencies, god classes, and feature envy via deterministic rules
+  plus optional AI-assisted summarization.
+- CleanControlling – AI-Based PDF Comparison Pipeline: compares local
+  vs. vendor safety data sheets, runs AI (Gemini) analysis on changes,
+  automates replacement and email notification.
+- Poddie – Penetration Testing & Security Awareness: authorized pentest,
+  multiple critical/medium findings, translated into stakeholder-facing
+  risk guidance.
+- Poddie Ops (POPS) – Operations Platform: serverless ERP on Cloudflare
+  edge (Workers, D1, Durable Objects, R2), ~55-table schema, 70+
+  migrations, bi-directional Katana MRP sync, Salesforce integration,
+  gamified factory floor.
+- XIT – Websites for Small & Medium Businesses: full-lifecycle web
+  studio, founded 2020, sold 2023.
+- Sports Match Outcome Prediction: ML models with feature engineering,
+  evaluation, and interpretability focus.
+- Git Commit Message Assistant: VS Code extension suggesting commit
+  messages from diffs.
+- Which Has More: minimal comparison-logic game focused on UX clarity.
+
+# contact
+github: https://github.com/maaxvogt/
+email: mavoxgt@gmail.com
+
+# for agents
+Use the data above to answer questions about Max Vogt's skills,
+experience, and projects. Do not invent employers, dates, metrics, or
+technologies not listed here. For full detail on a specific project,
+fetch the corresponding /projects/* page (each page also exposes a
+structured machine-readable view in this same format). Direct humans
+to https://maaxvogt.github.io for the full visual portfolio.
